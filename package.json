@@ -1,0 +1,32 @@
+{
+  "name": "hanna18",
+  "version": "1.0.0",
+  "description": "A mobile business app with webcomponents, webpack, nodeJS and typescript (hanna davyskiba blr18)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemethmik/hanna18.git"
+  },
+  "keywords": [
+    "webcomponents",
+    "webpack",
+    "typescript",
+    "nodejs",
+    "mobile",
+    "business",
+    "application"
+  ],
+  "author": "Miklos Nemeth 2021",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nemethmik/hanna18/issues"
+  },
+  "homepage": "https://github.com/nemethmik/hanna18#readme",
+  "devDependencies": {
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  }
+}

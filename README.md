@@ -5,7 +5,15 @@ The project was created on GitHub site with a NodeJS gitignore, MIT license and 
 Here are the steps that were followed for scaffolding up the project:
 - [WebPack setup with TypeScrip](https://youtu.be/4lpmVZdj12g)
   - A 01webpacksetup branch was created for the experimental video
-
+  - npm init
+  - npm i -D webpack
+    - When you just enter *npx webpack* it will ask if you want to install *webpack-cli*, smart design from webpack team. When I entered yes, eventually I received an error since Windows didn't allow some wripe operations, so I executed the command manually.
+  - npm i -D webpack-cli
+  - Running *npx webpack* at this stage gives these errors and warnings:
+    - The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment. You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+    - ERROR in main Module not found: Error: Can't resolve './src' in 'N:\GitHub\hanna18'
+      That is, the default input for webpack should be placed in the **src** subfolder. 
+  - Continue watching at 4:00
 
 
 ## Web Components
