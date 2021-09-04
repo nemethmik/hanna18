@@ -13,7 +13,14 @@ Here are the steps that were followed for scaffolding up the project:
     - The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment. You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
     - ERROR in main Module not found: Error: Can't resolve './src' in 'N:\GitHub\hanna18'
       That is, the default input for webpack should be placed in the **src** subfolder. 
-  - Continue watching at 4:00
+    - Continue watching at 4:00
+    - So, just create an *src* folder and move the *index.js* into that folder, then running again *npx webpack* will create a *dist* folder with a *main.js* and the default build is production, that is it removes anz code that is irrelevent and not doing anything.
+  - At this point you can add a *build* command to *package.json* to use *npm run build*
+  - If you rename *index.js* in the src folder to *index.ts* running build gives an error *Module not found: Error: Can't resolve './src' in ...* which actually means that it cannot find an index.js. This is the point when you need to create a webpack configuration file to handle typescript files, too.
+  - In the video the instructor manually creating webpack configuration file, but there is a lot more [elegant and official](https://webpack.js.org/api/cli/#init) way, since then the newer versions of webpack will have a chance to create a more uptodate version of config: **npx webpack init** 
+    - But, idea for *webpack init* is to replace npm init and tsc --init, too, since it will ask a handful of questions, and one of them is to support typescript, so the way this instructor explained how to setup a webpack project with typescript support is absolutely not the recommended way.
+    - Therefore, **I abort this branch** and restart a branch *02webpacksetuptheproperway* from the master branch.
+
 
 
 ## Web Components
