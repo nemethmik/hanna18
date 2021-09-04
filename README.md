@@ -4,7 +4,9 @@ A webcomponent mobile app with Webpack/NodeJS and Typescript (Hanna Davyskiba 18
 The project was created on GitHub site with a NodeJS gitignore, MIT license and a README. Then it was cloned on a local computer to start experimenting and developing.
 Here are the steps that were followed for scaffolding up the project:
 - [WebPack setup with TypeScrip](https://youtu.be/4lpmVZdj12g)
-  - A 01webpacksetup branch was created for the experimental video
+  - A 01webpacksetup branch was created for the experimental video, but eventually at 5:50 I found that what the instructor was doing is not really the proper way.
+  - So, I create a new branch *02webpacksetuptheproperway* to experiment with the proper webpack project setup process which is based on [webpack-cli init](https://github.com/webpack/webpack-cli/blob/master/packages/generators/INIT.md)
+- Instead of using *npm init* use **npx webpack init* which will have a number of questions including support for typescrip and SASS. Here are the sequence without installing webpack-cli globally.
 
 
 
