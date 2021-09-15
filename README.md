@@ -1,12 +1,30 @@
 # hanna18
-A webcomponent mobile app with Webpack/NodeJS and Typescript (Hanna Davyskiba 18 BLR)
+This project is basically my main experiment with configuring WebPack5 in general and for web components specifically to build 
+a webcomponent mobile app with Webpack/NodeJS and TypeScript (titled after Hanna Davyskiba 18 BLR)
 
 The project was created on GitHub site with a NodeJS gitignore, MIT license and a README. Then it was cloned on a local computer to start experimenting and developing.
 Here are the steps that were followed for scaffolding up the project:
-- [WebPack setup with TypeScrip](https://youtu.be/4lpmVZdj12g)
-  - A 01webpacksetup branch was created for the experimental video
-
-
+- *main* - is empty has only this readme 
+- *01webpacksetup* - it was a dead end since it didn't use the excellent *webpack-cli init*
+  - [WebPack setup with TypeScrip](https://youtu.be/4lpmVZdj12g)
+- [02webpacksetuptheproperway](https://github.com/nemethmik/hanna18/tree/02webpacksetuptheproperway) is a detailed step-by-step demonstration how to use *webpack-cli init*
+- *03webpackwithlit* seems to be the same as 02, even Lit wasn't installed into the project. This branch could be safely deleted.
+- [04demoviewwithlit](https://github.com/nemethmik/hanna18/tree/04demoviewwithlit) had a basic view from a Marcus Hellberg video or maybe from his tutorial.
+  ```typescript
+  import { html, render, LitElement, TemplateResult } from 'lit';
+  import { customElement,property } from 'lit/decorators.js';
+  @customElement('minimal-view')
+  export class MinimalView extends LitElement {
+      @property() name = "Hanna 18"
+      override render(): TemplateResult {
+          return html`<h1>My View ${this.name}</h1>`;
+      }
+  }
+  window.addEventListener("load",()=>{
+      render(html`<h1>Hello</h1><minimal-view></minimal-view>`,document.getElementById("root"))
+  })
+  ```
+  Here *tsconfig.json* has the proper **"target": "ES2021"** setting which is mandatory for web components with Lit Element decorators.
 
 ## Web Components
 [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) are with us for a while and market/community/business acceptance os mature enough: [Lit (formerly Lit Element)](https://lit.dev/) and Stencil, Ionic are librraies based on Web Components. Number of these videos are from  Marcus Hellberg (vaadin).
