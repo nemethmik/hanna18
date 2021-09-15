@@ -6,7 +6,15 @@ Here are the steps that were followed for scaffolding up the project:
 - [WebPack setup with TypeScrip](https://youtu.be/4lpmVZdj12g)
   - A 01webpacksetup branch was created for the experimental video
 
+In the branch **04demoviewwithlit** I figured out what caused the problems:
+- in **tsconfig.json** set 
+  - "target": "ES2021",
+  - "module": "ESNext",
+  - "inlineSourceMap": true
+- in **webpack.config.js** add
+  - devtool:"inline-source-map",
 
+In this version I cannot see the message that lit is not imported properly, unlike in some of my other projects.
 
 ## Web Components
 [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) are with us for a while and market/community/business acceptance os mature enough: [Lit (formerly Lit Element)](https://lit.dev/) and Stencil, Ionic are librraies based on Web Components. Number of these videos are from  Marcus Hellberg (vaadin).
