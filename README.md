@@ -1,6 +1,20 @@
 # hanna18
 A webcomponent mobile app with Webpack/NodeJS and Typescript (Hanna Davyskiba 18 BLR)
 
+The branch 04demoviewwithlit implements the [minimal Lit component example](https://vaadin.com/docs/latest/fusion/application/lit/#minimal-lit-component) from the Vaading Fusion tutorial pages.
+```typescript
+import { html, LitElement, TemplateResult } from 'lit';
+import { customElement } from 'lit/decorators.js';
+
+@customElement('minimal-view')
+class MinimalView extends LitElement {
+  render(): TemplateResult {
+    return html`<h1>My View</h1>`;
+  }
+}
+export default MinimalView;
+```
+
 The project was created on GitHub site with a NodeJS gitignore, MIT license and a README. Then it was cloned on a local computer to start experimenting and developing.
 Here are the steps that were followed for scaffolding up the project:
 - [WebPack setup with TypeScrip](https://youtu.be/4lpmVZdj12g)
